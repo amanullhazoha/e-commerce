@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #1b1a20;
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}

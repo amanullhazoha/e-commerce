@@ -1,0 +1,48 @@
+.filter {
+  width: 15%;
+  margin-right: 15px;
+}
+
+.filter h3 {
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.filterItems li {
+  width: 37px;
+  height: 37px;
+  background: #ececec;
+  font-size: 11px;
+  color: #1b1a20;
+  text-align: center;
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 20px;
+  line-height: 37px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.filterItems li:hover {
+  border: 1px solid #1b1a20;
+}
+
+.filterItems li.active {
+  color: #fff;
+  background: #1b1a20;
+}
+
+@media screen and (max-width: 426px) {
+  .filter {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .filter ul {
+    display: flex;
+    justify-content: center;
+  }
+}

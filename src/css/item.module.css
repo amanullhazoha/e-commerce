@@ -1,0 +1,92 @@
+.item {
+  width: 25%;
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+  border: 1px solid transparent;
+  margin-bottom: 30px;
+}
+
+.item:hover {
+  border: 1px solid #ececec;
+}
+
+.item .imgTag {
+  color: #fff;
+  background: #1b1a20;
+  padding: 3px;
+  font-size: 14px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.item .name {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  height: 35px;
+}
+
+.item .name p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.item .name p::before {
+  content: " ";
+  width: 20px;
+  height: 2px;
+  background-color: #eabf00;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  bottom: -13px;
+}
+
+.item .price {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.item .price p span {
+  font-weight: normal;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.item .installment {
+  color: #9c9b9b;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.item .addCart button {
+  width: 100%;
+  border: none;
+  padding: 15px 0;
+  font-size: 16px;
+  color: #fff;
+  background: #1b1a20;
+}
+
+.item:hover .addCart button {
+  background: #eabf00;
+}
+
+@media screen and (max-width: 1024px) {
+  .item {
+    width: 33.33%;
+  }
+}
+
+@media screen and (max-width: 641px) {
+  .item {
+    width: 50%;
+  }
+}

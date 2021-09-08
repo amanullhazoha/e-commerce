@@ -1,0 +1,50 @@
+.productBar {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productBar p {
+  float: left;
+  font-size: 15px;
+  margin-top: 7px;
+}
+
+.productBar .orderBy {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+
+.orderBy h3 {
+  font-weight: normal;
+  margin-right: 15px;
+}
+
+.orderBy select {
+  padding: 5px 10px;
+  outline: none;
+  border: 1px solid #ececec;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 426px) {
+  .productBar {
+    display: block;
+  }
+  .productBar p {
+    float: none;
+    text-align: center;
+  }
+
+  .productBar .orderBy {
+    float: none;
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+}
