@@ -3,7 +3,7 @@ import Button from './Button';
 
 const Item = ({ products }) =>
     products.map((product) => (
-        <div className={classes.item}>
+        <div className={classes.item} key={product.id}>
             <p className={classes.imgTag}>Free shipping</p>
             <img src={`img/${product.img}`} alt="Dress" className="img-fluid" />
             <div className={classes.name}>

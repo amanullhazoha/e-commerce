@@ -1,5 +1,6 @@
 const DATA = [
     {
+        id: '1',
         productName: 'Cat Tee Black T-Shirt',
         img: 'img.jpg',
         priceDollar: '10',
@@ -9,6 +10,7 @@ const DATA = [
         size: 'XS',
     },
     {
+        id: '2',
         productName: 'Dark Thug Blue-Navy T-Shirt',
         img: 'img1.jpg',
         priceDollar: '29',
@@ -18,6 +20,7 @@ const DATA = [
         size: 'S',
     },
     {
+        id: '3',
         productName: 'Sphynx Tie Dye Wine T-Shirt',
         img: 'img3.jpg',
         priceDollar: '14',
@@ -27,6 +30,7 @@ const DATA = [
         size: 'ML',
     },
     {
+        id: '4',
         productName: 'Skuul',
         img: 'img4.jpg',
         priceDollar: '5',
@@ -36,6 +40,7 @@ const DATA = [
         size: 'M',
     },
     {
+        id: '5',
         productName: 'Cat Tee Black T-Shirt',
         img: 'img5.jpg',
         priceDollar: '18',
@@ -45,6 +50,7 @@ const DATA = [
         size: 'S',
     },
     {
+        id: '6',
         productName: 'Dark Thug Blue-Navy T-Shirt',
         img: 'img6.jpg',
         priceDollar: '29',
@@ -54,6 +60,7 @@ const DATA = [
         size: 'L',
     },
     {
+        id: '7',
         productName: 'Sphynx Tie Dye Wine T-Shirt',
         img: 'img7.jpg',
         priceDollar: '19',
@@ -63,6 +70,7 @@ const DATA = [
         size: 'XL',
     },
     {
+        id: '8',
         productName: 'Skuul',
         img: 'img8.jpg',
         priceDollar: '13',
@@ -72,6 +80,7 @@ const DATA = [
         size: 'XS',
     },
     {
+        id: '9',
         productName: 'Cat Tee Black T-Shirt',
         img: 'img9.jpg',
         priceDollar: '110',
@@ -81,6 +90,7 @@ const DATA = [
         size: 'XXL',
     },
     {
+        id: '10',
         productName: 'Dark Thug Blue-Navy T-Shirt',
         img: 'img10.jpg',
         priceDollar: '29',
@@ -90,6 +100,7 @@ const DATA = [
         size: 'XS',
     },
     {
+        id: '11',
         productName: 'Sphynx Tie Dye Wine T-Shirt',
         img: 'img11.jpg',
         priceDollar: '91',
@@ -99,6 +110,7 @@ const DATA = [
         size: 'M',
     },
     {
+        id: '12',
         productName: 'Skuul',
         img: 'img12.jpg',
         priceDollar: '14',
@@ -108,6 +120,7 @@ const DATA = [
         size: 'L',
     },
     {
+        id: '13',
         productName: 'Cat Tee Black T-Shirt',
         img: 'img13.jpg',
         priceDollar: '11',
@@ -117,6 +130,7 @@ const DATA = [
         size: 'S',
     },
     {
+        id: '14',
         productName: 'Dark Thug Blue-Navy T-Shirt',
         img: 'img14.jpg',
         priceDollar: '29',
@@ -126,6 +140,7 @@ const DATA = [
         size: 'L',
     },
     {
+        id: '15',
         productName: 'Sphynx Tie Dye Wine T-Shirt',
         img: 'img15.jpg',
         priceDollar: '18',
@@ -135,6 +150,7 @@ const DATA = [
         size: 'XL',
     },
     {
+        id: '16',
         productName: 'Sphynx Tie Dye Wine T-Shirt',
         img: 'img16.jpg',
         priceDollar: '9',
