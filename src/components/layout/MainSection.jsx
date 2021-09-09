@@ -11,6 +11,7 @@ class MainSection extends Component {
         products: [],
         filterValue: [],
         filter: [],
+        priceSearchTrem: 'select',
     };
 
     componentDidMount() {
@@ -21,14 +22,15 @@ class MainSection extends Component {
     }
 
     handelChange = (value) => {
-        console.log(value);
+        this.setState({
+            priceSearchTrem: value,
+        });
     };
 
     handelFilter = (value) => {
         const { products, filter, filterValue } = this.state;
-        const filterArr = products.filter((product) => product.size === value.value);
 
-        // const filterUpdate = filterArr.concat(filter);
+        const filterArr = products.filter((product) => product.size === value.value);
 
         const filterUpdate = () => {
             if (value.status) {
@@ -38,9 +40,6 @@ class MainSection extends Component {
 
             return mainFilter;
         };
-
-        // const val = filter.map((item) => item.id) === filterArr.map((item) => item.id);
-        // console.log(val);
 
         const filterVal = [...filterValue];
         const filterValueFind = filterVal.find((item) => item.value === value.value);
@@ -53,12 +52,34 @@ class MainSection extends Component {
         }));
     };
 
+    priceSearch = (products) => {
+        const { priceSearchTrem } = this.state;
+
+        const byPrice = products.slice(0);
+
+        if (priceSearchTrem === 'lowest') {
+            return byPrice.sort(
+                (a, b) => a.priceDollar + a.priceCent - (b.priceDollar + b.priceCent)
+            );
+        }
+        if (priceSearchTrem === 'highest') {
+            return byPrice.sort(
+                (a, b) => b.priceDollar + b.priceCent - (a.priceDollar + a.priceCent)
+            );
+        }
+
+        return products;
+    };
+
     searchPerfom = () => {
         const { filter, products } = this.state;
+
         if (filter.length > 0) {
-            return <Products products={filter} handelChange={this.handelChange} />;
+            const pricefil = this.priceSearch(filter);
+            return <Products products={pricefil} handelChange={this.handelChange} />;
         }
-        return <Products products={products} handelChange={this.handelChange} />;
+        const pricefilProd = this.priceSearch(products);
+        return <Products products={pricefilProd} handelChange={this.handelChange} />;
     };
 
     render() {
