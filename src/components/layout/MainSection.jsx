@@ -4,6 +4,7 @@ import DATA from '../../data/data';
 import FILTERVALUE from '../../data/filterValue';
 import AddButton from '../addButton';
 import Fileter from '../Filter';
+import Model from '../model';
 import Products from '../Products';
 
 class MainSection extends Component {
@@ -12,6 +13,8 @@ class MainSection extends Component {
         filterValue: [],
         filter: [],
         priceSearchTrem: 'select',
+        selelcted: [],
+        isOpen: false,
     };
 
     componentDidMount() {
@@ -25,6 +28,34 @@ class MainSection extends Component {
         this.setState({
             priceSearchTrem: value,
         });
+    };
+
+    selectProduct = (selectProduct) => {
+        const { selelcted } = this.state;
+
+        if (selelcted.length > 0) {
+            const boolen = selelcted.map((item) => item.id === selectProduct.id);
+            const [bool] = boolen;
+            console.log(bool);
+
+            if (bool) {
+                this.setState((prevState) => ({
+                    selelcted: prevState.selelcted,
+                }));
+            } else {
+                const updateSelected = [selectProduct, ...selelcted];
+
+                this.setState({
+                    selelcted: updateSelected,
+                });
+            }
+        } else {
+            const updateSelected = [selectProduct, ...selelcted];
+
+            this.setState({
+                selelcted: updateSelected,
+            });
+        }
     };
 
     handelFilter = (value) => {
@@ -52,6 +83,18 @@ class MainSection extends Component {
         }));
     };
 
+    openModel = () => {
+        this.setState({
+            isOpen: true,
+        });
+    };
+
+    closeModel = () => {
+        this.setState({
+            isOpen: false,
+        });
+    };
+
     priceSearch = (products) => {
         const { priceSearchTrem } = this.state;
 
@@ -76,26 +119,39 @@ class MainSection extends Component {
 
         if (filter.length > 0) {
             const pricefil = this.priceSearch(filter);
-            return <Products products={pricefil} handelChange={this.handelChange} />;
+            return (
+                <Products
+                    products={pricefil}
+                    handelChange={this.handelChange}
+                    selectProduct={this.selectProduct}
+                />
+            );
         }
         const pricefilProd = this.priceSearch(products);
-        return <Products products={pricefilProd} handelChange={this.handelChange} />;
+        return (
+            <Products
+                products={pricefilProd}
+                handelChange={this.handelChange}
+                selectProduct={this.selectProduct}
+            />
+        );
     };
 
     render() {
-        const { filterValue, filter } = this.state;
-        console.log(filter);
-        this.searchPerfom();
+        const { filterValue, selelcted, isOpen } = this.state;
 
         return (
-            <div className={classes.mainSection}>
-                <Fileter filterValue={filterValue} handelFilter={this.handelFilter} />
+            <>
+                <div className={classes.mainSection}>
+                    <Fileter filterValue={filterValue} handelFilter={this.handelFilter} />
 
-                {this.searchPerfom()}
+                    {this.searchPerfom()}
 
-                {/* <Products products={products} /> */}
-                <AddButton />
-            </div>
+                    {/* <Products products={products} /> */}
+                    <AddButton selected={selelcted} openModel={this.openModel} />
+                    <Model selected={selelcted} isOpen={isOpen} closeModel={this.closeModel} />
+                </div>
+            </>
         );
     }
 }

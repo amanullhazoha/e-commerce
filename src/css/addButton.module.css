@@ -1,11 +1,12 @@
 .addButton {
+  z-index: 9999;
   position: fixed;
   top: 0px;
   right: 0;
   border: none;
-  background: #1b1a20;
+  background: transparent;
   font-size: 34px;
-  color: #fff;
+  color: #000;
   width: 60px;
   height: 60px;
 }

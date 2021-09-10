@@ -1,0 +1,95 @@
+.modelBody {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  width: 375px;
+  height: 400px;
+  right: 0;
+  top: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.model {
+  padding: 20px;
+}
+
+.model h1 {
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.closeButton {
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+}
+
+.closeButton:hover {
+  color: #eabf00;
+}
+
+.content {
+  height: 230px;
+  overflow: auto;
+}
+
+.addItem {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #c0c0cd;
+  display: flex;
+}
+
+.addItem img {
+  width: 75px;
+  height: 100px;
+  margin-right: 30px;
+}
+
+.countBtn {
+  width: 150px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.countBtn p {
+  padding: 5px 10px;
+  background: #fff;
+  color: #dd4f42;
+  font-weight: bold;
+}
+
+.countBtn button {
+  padding: 5px 10px;
+  font-size: 18px;
+}
+
+.total {
+  font-size: 18px;
+  width: 50%;
+  position: absolute;
+  bottom: 60px;
+  left: 25%;
+  padding: 5px;
+  background: #eabf00;
+}
+
+.payment {
+  width: 350px;
+  border: none;
+  padding: 5px 0;
+  color: #000;
+  font-size: 18px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 20px;
+  right: 12px;
+}
+
+.payment:hover {
+  background: salmon;
+}
